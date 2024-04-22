@@ -1,6 +1,6 @@
 # todo
 
-A new Flutter project.
+My first project Flutter in my life.
 
 ## Getting Started
 
