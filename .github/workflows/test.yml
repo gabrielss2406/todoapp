@@ -1,13 +1,5 @@
-name: Testes Cypress
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+name: Cypress Tests
+on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
