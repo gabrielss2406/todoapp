@@ -5,9 +5,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código
+    - name: Checkout do código do repositório todoapp
       uses: actions/checkout@v2
+      
+    - name: Checkout do código do repositório Cypress_Pipeline
+      uses: actions/checkout@v2
+      with:
+        repository: gabrielss2406/Cypress_Pipeline
+        path: cypress_tests  # Define o diretório onde o repositório será clonado
 
     - name: Rodar testes Cypress
-      run: npx run test:cypress -- --env REPO_URL=https://github.com/gabrielss2406/Cypress_Pipeline
-
+      working-directory: ./cypress_tests  # Define o diretório onde os testes serão executados
+      run: npm install && npm run test:cypress -- --env REPO_URL=https://github.com/gabrielss2406/Cypress_Pipeline
