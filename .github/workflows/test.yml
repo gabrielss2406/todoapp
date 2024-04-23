@@ -8,9 +8,6 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v2
 
-    - name: Instalar dependências
-      run: npm install
-
     - name: Rodar testes Cypress
       run: npm run test:cypress -- --env REPO_URL=https://github.com/gabrielss2406/Cypress_Pipeline
 
